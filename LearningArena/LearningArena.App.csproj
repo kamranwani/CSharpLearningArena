@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LearningArena.ApplicationLayer\LearningArena.ApplicationLayer.csproj" />
+		<ProjectReference Include="..\LearningArena.Persistence\LearningArena.Persistence.csproj" />
+		<ProjectReference Include="..\LearningArena.Domain\LearningArena.Domain.csproj" />
+		
+	</ItemGroup>
+
+</Project>
