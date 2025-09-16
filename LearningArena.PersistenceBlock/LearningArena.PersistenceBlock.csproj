@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LearningArena.DomainBlock\LearningArena.DomainBlock.csproj" />
+  </ItemGroup>
+
 </Project>

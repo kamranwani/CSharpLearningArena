@@ -1,5 +1,6 @@
 ﻿using LearningArena.DomainBlock.Entities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,13 @@ namespace LearningArena.ApplicationBlock.Interface
 {
     public interface IUserService
     {
-        public bool RegisterUser();
-        public User GetUser(Guid id);
+        public bool RegisterUser(User user);
+        public User GetUser(Guid id );
 
-        public bool UpdateUser(Guid id);
+        public bool UpdateUser(Guid id, User updatedUser);
 
         public bool DeleteUser(Guid id);
 
-        public List<User> GetAllUsers();
+        public IEnumerable<User> GetAllUsers();
     }
 }

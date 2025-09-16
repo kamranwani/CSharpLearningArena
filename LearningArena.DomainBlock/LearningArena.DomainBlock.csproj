@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\LearningArena.PersistenceBlock\LearningArena.PersistenceBlock.csproj" />
-  </ItemGroup>
-
 </Project>
