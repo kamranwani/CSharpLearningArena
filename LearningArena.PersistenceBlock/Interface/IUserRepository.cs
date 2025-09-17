@@ -7,14 +7,18 @@ using System.Threading.Tasks;
 
 namespace LearningArena.PersistenceBlock.Interface
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
 
-        public bool AddUser(User user);
-        public bool RemoveUser(Guid id);
+         bool AddUser(User user);
+         bool RemoveUser(Guid id);
 
-        public bool UpdateUser(User user);
+         bool UpdateUser(User user);
 
-        public IEnumerable<User> GetAllUsers();
+         IEnumerable<User> GetAllUsers();
+
+        void SendMessage(string msg);
+
+        string GetMessage();
     }
 }

@@ -10,13 +10,16 @@ namespace LearningArena.ApplicationBlock.Interface
 {
     public interface IUserService
     {
-        public bool RegisterUser(User user);
-        public User GetUser(Guid id );
+         bool RegisterUser(User user);
+         User GetUser(Guid id );
 
-        public bool UpdateUser(Guid id, User updatedUser);
+         bool UpdateUser(Guid id, User updatedUser);
 
-        public bool DeleteUser(Guid id);
+        bool DeleteUser(Guid id);
 
-        public IEnumerable<User> GetAllUsers();
+         IEnumerable<User> GetAllUsers();
+
+        void SendMessage(string msg);
+        string GetMessage();
     }
 }

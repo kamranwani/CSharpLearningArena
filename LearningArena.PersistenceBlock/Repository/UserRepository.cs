@@ -9,9 +9,20 @@ using System.Threading.Tasks;
 namespace LearningArena.PersistenceBlock.Repositary;
 
 
-internal class UserRepository : IUserRepository
+public class UserRepository : IUserRepository
 {
     private readonly List<User> _users = new List<User>();
+
+    private readonly string _path = @"C:\Users\Kamran Wani\Documents\data.txt";
+
+    public void SendMessage(string msg)
+    {
+        using StreamWriter sw=new StreamWriter(_path,true);
+              sw.WriteLine(msg);
+    }
+
+    
+
 
     public bool AddUser(User user)
     {
@@ -30,8 +41,17 @@ internal class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
+    
+
     public bool UpdateUser(User user)
     {
         throw new NotImplementedException();
+    }
+
+    public string GetMessage()
+    {
+        using StreamReader sr=new StreamReader(_path);
+        string msg = sr.ReadToEnd();
+        return msg;
     }
 }
